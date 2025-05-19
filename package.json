@@ -1,0 +1,59 @@
+{
+  "name": "agenda-tarefas",
+  "productName": "Task Agenda",
+  "version": "1.0.0",
+  "description": "Uma aplicação para gerenciamento de tarefas e organização de agendas.",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --linux AppImage"
+  },
+  "dependencies": {
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-squirrel-startup": "^1.0.1",
+    "sweetalert2": "^11.19.1"
+  },
+  "devDependencies": {
+    "electron": "^35.2.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.example.taskagenda",
+    "productName": "Task Agenda",
+    "asar": true,
+    "files": [
+      "**/*",
+      "!node_modules/{javascript-obfuscator,electron-builder}",
+      "!out",
+      "!dist"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "./assets/agenda2.png",
+      "desktop": {
+        "entry": {
+          "Name": "Task Agenda",
+          "Comment": "Gerenciamento de tarefas e organização de agendas",
+          "Icon": "agenda-tarefas"
+        }
+      }
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./assets/agenda2.ico"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "./assets/agenda2.icns"
+    }
+  }
+}

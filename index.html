@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/styles.css"/>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link href="<https://fonts.googleapis.com/css2?family=Roboto&display=swap>" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+</head>
+<body>
+    <div class="intro">
+   
+        <h1>Agenda de Tarefas</h1>
+   
+        <img  id="agenda" src="buid/agenda2.png" alt="agenda">
+     </div>
+     <div class="card__todo">
+        <h2>O que vou fazer hoje?</h2>
+        <input type="text" onkeyup="addNewTodo(event)"  id="inputTodo" placeholder="Escreva sua atividade...">
+        <span onclick="addNewTodo()" class="btn__add">ADD</span>
+     </div>
+     <ul id="ulTodo">
+      <div id="errorMessage"></div>
+     </ul>
+
+    
+     <script src="./javascript/index.js"></script>
+</body>
+</html>
